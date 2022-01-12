@@ -10,24 +10,27 @@ import getDataApi from './utils/getDataApi';
 
 function App() {
 
+  const API = process.env.REACT_APP_API;
+  
   const [ precio, setPrecio ] = useState({compra: 0,venta: 0});
 
   const [ load, setLoader ] = useState(true);
 
-  const query = getDataApi('http://localhost/app/Divisas')
-useLayoutEffect(() => {
- 
-  query
-    .then(res => {
-      setPrecio({
-        compra: res[0].com_divisa,
-        venta: res[0].ven_divisa,
-      });
-      if(document.querySelector('.container'))
-                  document.querySelector('.container').style.display = 'grid';
-      setTimeout(() => setLoader(false), 1000);
-    })
-}, [load]);	
+  const query = getDataApi(API);
+
+  useLayoutEffect(() => {
+  
+    query
+      .then(res => {
+        setPrecio({
+          compra: res[0].com_divisa,
+          venta: res[0].ven_divisa,
+        });
+        if(document.querySelector('.container'))
+                    document.querySelector('.container').style.display = 'grid';
+        setTimeout(() => setLoader(false), 1000);
+      })
+  }, [load]);	
 
   return (
     <Fragment>

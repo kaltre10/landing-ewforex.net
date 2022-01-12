@@ -391,4 +391,9 @@ a{
 		max-width: 300px;
 		margin-bottom: 150px;
 	}
+
+	.footer-over{
+		height: 100vh;
+	}
+
 }

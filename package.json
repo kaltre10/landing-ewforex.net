@@ -40,5 +40,6 @@
   },
   "devDependencies": {
     "react-image-webp": "^0.8.0"
-  }
+  },
+  "homepage": "http://ewforex.net/testing"
 }
