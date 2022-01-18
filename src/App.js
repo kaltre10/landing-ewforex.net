@@ -24,7 +24,7 @@ function App() {
           venta: res[0].ven_divisa,
         });
         if(document.querySelector('.container'))
-                    document.querySelector('.container').style.display = 'grid';
+            document.querySelector('.container').style.display = 'grid';
         setTimeout(() => setLoader(false), 1000);
       })
   }, [load]);	

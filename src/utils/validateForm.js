@@ -103,7 +103,7 @@ function valueEmail(correo){
 }
 
 function send(values){
-	return fetch(`http://localhost/appew/app-dolar/Libro`,{
+	return fetch(process.env.REACT_APP_EMAIL,{
 				method: 'POST',
 				// headers: {
 			  	// 			'content-type': 'application/json'
