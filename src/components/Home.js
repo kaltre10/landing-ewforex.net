@@ -22,6 +22,8 @@ const Home = ({ load, precio }) => {
                     load={load}
                     compra={precio.compra}
                     venta={precio.venta}
+                    compraEur={precio.compraEur}
+                    ventaEur={precio.ventaEur}
                 />
             </Header>
             <About />

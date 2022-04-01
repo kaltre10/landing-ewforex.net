@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Libro from './components/Libro';
 import { Routes, Route } from "react-router-dom";
 import Footer from './components/Footer';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import particlesConfig from './config/particlesConfig';
 import Loader from './components/Loader';
 import getDataApi from './utils/getDataApi';
@@ -22,6 +22,8 @@ function App() {
         setPrecio({
           compra: res[0].com_divisa,
           venta: res[0].ven_divisa,
+          compraEur: res[1].com_divisa,
+          ventaEur: res[1].ven_divisa,
         });
         if(document.querySelector('.container'))
             document.querySelector('.container').style.display = 'grid';
@@ -59,7 +61,7 @@ function App() {
       {load && <Loader />}
       {!load &&
         <div className="container">
-          <Particles id="particles-js" params={particlesConfig} />
+          <Particles id="tsparticles" params={particlesConfig} />
             <Routes>
               <Route path="/" element={<Home load={load} precio={precio} />} />
               <Route path="/libro" element={<Libro setLoader={setLoader} />} />

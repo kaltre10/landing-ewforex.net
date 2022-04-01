@@ -33,9 +33,10 @@ const Footer = () => {
 						<div className="footer-card">
 							<h2>Recursos</h2>
 							
-							<p><a href="terminos.pdf" target="_blank">Términos y condiciones</a></p>
-							<p><a href="politicas.pdf" target="_blank">Política de Privacidad</a></p>
-							<p><Link to='/Libro'>Libro de Reclamaciones</Link></p>
+							<p><a href="terminos.pdf" target="_blank"> > Términos y condiciones</a></p>
+							<p><a href="politicas.pdf" target="_blank"> > Política de Privacidad</a></p>
+							<p><Link to='/Libro'> > Libro de Reclamaciones</Link></p>
+							<p><a href="https://ww1.sunat.gob.pe/ol-ti-itconsultaunificadalibre/consultaUnificadaLibre/consulta" target="_blank"> > Boletas Sunat</a></p>
 						</div>
 					</div>
 					<p>© 2021 ewforex.net | Todos los derechos reservados.</p>

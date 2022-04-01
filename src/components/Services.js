@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Loader from './Loader';
 
-const Services = ({compra, venta, load}) => {
+const Services = ({compra, venta, compraEur, ventaEur, load}) => {
 
    	return (
 	<div className="service">
@@ -14,16 +14,28 @@ const Services = ({compra, venta, load}) => {
 				<div className="price">
 					<div className="compra">
 						<p>Compra</p>
-						<p id="compra">
-							{load ? <Loader /> : compra }
-					    </p>
+						<div>
+							<p id="compra">
+								{load ? <Loader /> : <span>USD {compra}</span> }
+							</p>
+							<p id="compra-eur">
+								{load ? <Loader /> : <span>EUR {compraEur}</span> }
+							</p>
+						</div>
+						
 					</div>
 					<div className="bar"></div>
 					<div className="venta">
 						<p>Venta</p>
-						<p id="venta">
-							{load ? <Loader /> : venta }
-						</p>	
+						<div>
+							<p id="venta">
+								{load ? <Loader /> : <span>USD {venta}</span> }
+							</p>
+							<p id="venta-eur">
+								{load ? <Loader /> : <span>EUR {ventaEur}</span> }
+							</p>
+						</div>
+							
 					</div>
 				</div>	
 			</div>
